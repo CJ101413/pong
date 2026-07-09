@@ -2,9 +2,11 @@
 #include "raylib.h"
 #include "paddle.h"
 #include "ball.h"
+#include "game.h"
 
 int main(void)
 {
+    
     InitWindow(1280, 720, "Pong");
     SetTargetFPS(60);
 
@@ -13,12 +15,13 @@ int main(void)
 
     while(!WindowShouldClose())
     {
-        Rectangle playerRec = { player.position.x, player.position.y, player.width, player.height };
-
-        player = UpdatePaddle(GetFrameTime(), player);
+        float dt = GetFrameTime();
+        player = UpdatePaddle(dt, player);
         
-        ball = UpdateBall(GetFrameTime(), ball);
+        ball = UpdateBall(dt, ball);
         ball = CheckWallCollision(ball);
+
+        Rectangle playerRec = { player.position.x, player.position.y, player.width, player.height };
         ball = CheckPlayerCollision(ball, player, playerRec);
 
         BeginDrawing();

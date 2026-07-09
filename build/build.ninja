@@ -79,6 +79,16 @@ build CMakeFiles/Pong.dir/src/ball.c.obj: C_COMPILER__Pong_unscanned_Debug C$:/d
   OBJECT_FILE_DIR = CMakeFiles\Pong.dir\src
   TARGET_SUPPORT_DIR = CMakeFiles\Pong.dir
 
+build CMakeFiles/Pong.dir/src/game.c.obj: C_COMPILER__Pong_unscanned_Debug C$:/dev/pong/src/game.c || cmake_object_order_depends_target_Pong
+  CONFIG = Debug
+  DEFINES = -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP
+  DEP_FILE = CMakeFiles\Pong.dir\src\game.c.obj.d
+  FLAGS = -g -std=gnu99
+  INCLUDES = -IC:/dev/pong/src/build/_deps/raylib-src/src
+  OBJECT_DIR = CMakeFiles\Pong.dir
+  OBJECT_FILE_DIR = CMakeFiles\Pong.dir\src
+  TARGET_SUPPORT_DIR = CMakeFiles\Pong.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target Pong
@@ -87,7 +97,7 @@ build CMakeFiles/Pong.dir/src/ball.c.obj: C_COMPILER__Pong_unscanned_Debug C$:/d
 #############################################
 # Link the executable Pong.exe
 
-build Pong.exe: C_EXECUTABLE_LINKER__Pong_Debug CMakeFiles/Pong.dir/src/main.c.obj CMakeFiles/Pong.dir/src/paddle.c.obj CMakeFiles/Pong.dir/src/ball.c.obj | _deps/raylib-build/raylib/libraylib.a || _deps/raylib-build/raylib/external/glfw/src/glfw _deps/raylib-build/raylib/libraylib.a
+build Pong.exe: C_EXECUTABLE_LINKER__Pong_Debug CMakeFiles/Pong.dir/src/main.c.obj CMakeFiles/Pong.dir/src/paddle.c.obj CMakeFiles/Pong.dir/src/ball.c.obj CMakeFiles/Pong.dir/src/game.c.obj | _deps/raylib-build/raylib/libraylib.a || _deps/raylib-build/raylib/external/glfw/src/glfw _deps/raylib-build/raylib/libraylib.a
   CONFIG = Debug
   FLAGS = -g
   LINK_LIBRARIES = _deps/raylib-build/raylib/libraylib.a  -lopengl32  -lglu32  -lwinmm  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
